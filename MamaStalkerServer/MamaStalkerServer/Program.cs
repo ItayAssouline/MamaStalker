@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace MamaStalkerServer
 {
@@ -10,6 +8,8 @@ namespace MamaStalkerServer
 	{
 		static void Main(string[] args)
 		{
+			var system = new MamaStalkerSystem(new ScreenCapture(), 3000);
+			system.Start();
 		}
 	}
 }
