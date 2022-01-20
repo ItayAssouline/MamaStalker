@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MamaStalkerServer
+namespace MamaStalkerServer.Implementations
 {
 	class MamaStalkerSystem
 	{

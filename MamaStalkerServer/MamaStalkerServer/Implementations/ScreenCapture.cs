@@ -9,7 +9,7 @@ using System.Text;
 using MamaStalkerServer.Abstractions;
 using MamaStalkerServer.Common;
 
-namespace MamaStalkerServer
+namespace MamaStalkerServer.Implementations
 {
 	class ScreenCapture : IScreenCapturer
 	{

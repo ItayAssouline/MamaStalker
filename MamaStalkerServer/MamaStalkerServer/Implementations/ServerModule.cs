@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using MamaStalkerServer.Common;
-namespace MamaStalkerServer
+namespace MamaStalkerServer.Implementations
 {
 	class ServerModule
     {
@@ -51,9 +51,22 @@ namespace MamaStalkerServer
         public void DistributeImageToClient(TcpClient client, MemoryStream image)
         {
 			Console.WriteLine("Distributing to client");
-            NetworkStream stream = client.GetStream();
-            //Send image to client
-            stream.Write(image.ToArray());
+            try
+			{
+                NetworkStream stream = client.GetStream();
+                //Send image to client
+                stream.Write(image.ToArray());
+            }
+            catch(Exception e)
+			{
+                if(!client.Connected)
+				{
+                    //log
+                    client.Close();
+                    _clients.Remove(client);
+				}
+			}
+            
         }
 
         public void DistributeToClients(MemoryStream image)

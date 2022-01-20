@@ -8,6 +8,12 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 
+
+/////////////////////////
+/////////////////////////
+///Had quite a rough time designing the system, would love feedback on how to do that correctly 
+/////////////////////////
+/////////////////////////
 namespace MamaStalkerClient
 {
     class MamaStalkerClient
@@ -19,12 +25,9 @@ namespace MamaStalkerClient
                 Int32 port = 11111;
                 TcpClient server = new TcpClient("127.0.0.1", port);
 				Console.WriteLine("Connected to server, waiting for data");
-                string message = string.Empty;
                 NetworkStream stream = server.GetStream();
                 Byte[] bytes = new Byte[256];
-
                 IFormatter formatter = new BinaryFormatter();
-                int i;
                 while (true) //find a way for understanding when stream is ending
 				{
                     
