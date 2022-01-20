@@ -8,7 +8,16 @@ namespace MamaStalkerServer
 	{
 		static void Main(string[] args)
 		{
-			var system = new MamaStalkerSystem(new ScreenCapture(), 3000);
+			int timeInterval;
+			if(args.Length != 0)
+			{
+				timeInterval = int.Parse(args[0]);
+			}
+			else
+			{
+				timeInterval = 6000;
+			}
+			var system = new MamaStalkerSystem(new ScreenCapture(), timeInterval);
 			system.Start();
 		}
 	}

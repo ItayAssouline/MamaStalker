@@ -21,8 +21,6 @@ namespace MamaStalkerServer
         }
         public void InitiateServer()
         {
-            
-       
             string serverIP = "127.0.0.1";
             int port = 11111;
             try
@@ -35,9 +33,11 @@ namespace MamaStalkerServer
                 
                 while (true)
                 {
+					Console.WriteLine("Registering Client");
                     //register client to clients
                     var client = server.AcceptTcpClient();
                     _clients.Add(client);
+					Console.WriteLine("Registered Client");
                 }
                 
                 server.Stop();
@@ -50,6 +50,7 @@ namespace MamaStalkerServer
 
         public void DistributeImageToClient(TcpClient client, MemoryStream image)
         {
+			Console.WriteLine("Distributing to client");
             NetworkStream stream = client.GetStream();
             //Send image to client
             stream.Write(image.ToArray());
@@ -57,11 +58,11 @@ namespace MamaStalkerServer
 
         public void DistributeToClients(MemoryStream image)
 		{
-			foreach (var client in _clients)
+			Console.WriteLine("Distributing to all clients");
+			Parallel.ForEach(_clients, client =>
 			{
                 DistributeImageToClient(client, image);
-			}
+			});
 		}
-
     }
 }

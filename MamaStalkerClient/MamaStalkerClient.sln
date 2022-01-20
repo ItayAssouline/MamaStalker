@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{8B71638C-47A3-41DA-A10E-08B6567CD894}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamaStalkerClient", "MamaStalkerClient\MamaStalkerClient.csproj", "{E85763D9-B324-482C-B1F9-A6B5F94DF7C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8B71638C-47A3-41DA-A10E-08B6567CD894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B71638C-47A3-41DA-A10E-08B6567CD894}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B71638C-47A3-41DA-A10E-08B6567CD894}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B71638C-47A3-41DA-A10E-08B6567CD894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E85763D9-B324-482C-B1F9-A6B5F94DF7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E85763D9-B324-482C-B1F9-A6B5F94DF7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E85763D9-B324-482C-B1F9-A6B5F94DF7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E85763D9-B324-482C-B1F9-A6B5F94DF7C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BBF45F8B-F08C-494E-9A7B-7C1AD5D2467B}
+		SolutionGuid = {ADE3B514-EE71-4EE6-B237-C54C24732184}
 	EndGlobalSection
 EndGlobal

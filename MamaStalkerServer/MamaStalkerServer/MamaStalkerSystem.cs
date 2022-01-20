@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace MamaStalkerServer
 {
@@ -20,7 +21,7 @@ namespace MamaStalkerServer
 		public void Start()
 		{
 			var server = new ServerModule();
-			server.InitiateServer();
+			Task.Run(() => server.InitiateServer());
 			while (true)
 			{
 				var streamToSend = _screenCaptureModule.Capture();
